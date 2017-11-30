@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- root "links#index"
+  root "links#index"
   devise_for :users
   resources :links
 
