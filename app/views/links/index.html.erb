@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%= notice %></p>
 
 <h1>Links</h1>
 
@@ -28,4 +28,16 @@
 
 <br>
 
-<%= link_to 'New Link', new_link_path %>
+
+<%= link_to 'New Link', new_link_path %>-->
+
+
+<%@links.each do |link|%>
+<div class="link row clearfix">
+<h2>
+<%=link_to link.title,link%><br>
+<small class="author">Submited<%=time_ago_in_words(link.created_at)%>by<%=link.user.email%>
+</small>
+</h2>
+</div>
+<%end%>
